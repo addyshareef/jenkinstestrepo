@@ -21,3 +21,13 @@ pipeline {
         }
     }
 }
+post {
+    always{
+        body: "See the result of jenkins",
+        recipientProviders: [requestor[]],
+        subject: "Jenkins pipeline output report",
+        to: "adnanshareef707@gmail.com"
+    }
+
+    }
+
