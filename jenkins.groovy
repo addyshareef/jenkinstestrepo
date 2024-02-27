@@ -21,15 +21,5 @@ pipeline {
         }
     }
 }
-post {
-    always{
-        onlySuccessfull: true
-        emailtext attachlogs: false, attachmentsPatterns: '*text',
-        body: "See the result of jenkins",
-        recipientProviders: [requestor[]],
-        subject: "Jenkins pipeline output report",
-        to: "adnanshareef707@gmail.com"
-    }
 
-    }
 
